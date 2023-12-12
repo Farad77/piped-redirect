@@ -1,6 +1,6 @@
 "use strict";
 
-const nitterDefault = "https://nitter.net";
+const nitterDefault = "https://piped.video";
 
 let instance;
 let nitterDisabled;
@@ -54,11 +54,10 @@ browser.webRequest.onBeforeRequest.addListener(
   },
   {
     urls: [
-      "*://twitter.com/*",
-      "*://www.twitter.com/*",
-      "*://mobile.twitter.com/*",
-      "*://pbs.twimg.com/*",
-      "*://video.twimg.com/*",
+      "*://youtube.com/*",
+      "*://www.youtube.com/*",
+      "*://mobile.youtube.com/*",
+      
     ],
   },
   ["blocking"]

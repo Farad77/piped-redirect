@@ -1,6 +1,6 @@
 "use strict";
 
-const nitterDefault = "https://nitter.net";
+const nitterDefault = "https://piped.video";
 
 let nitterDisabled;
 let instance;
@@ -24,7 +24,7 @@ browser.storage.sync.get(["nitterDisabled", "instance"], (result) => {
   instance = result.instance || nitterDefault;
   navigator.serviceWorker.getRegistrations().then((registrations) => {
     for (let registration of registrations) {
-      if (registration.scope === "https://twitter.com/") {
+      if (registration.scope === "https://youtube.com/") {
         registration.unregister();
         console.log("Unregistered Twitter SW", registration);
       }
